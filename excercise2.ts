@@ -3,7 +3,7 @@ let tasks: Array <string> = [];
 function addTask(task:string): number {
 
     let count: number = tasks.push(task);
-    console.log("Item " + task + " inserted to the array");
+    console.log("Item '" + task + "' inserted to the array");
     return count;
 
 }//end of addTask 
@@ -28,6 +28,7 @@ function deleteTask(task: string): number{
 
     if (indexOfTask > -1) {
     tasks.splice(indexOfTask,1);
+    console.log("Item '" + task + "' removed from the array");
     } //end of if 
 
     return tasks.length;
@@ -38,3 +39,6 @@ let x: number = addTask("Test");
 console.log(x);
 
 listAllTasks();
+
+let y: number = deleteTask("Test");
+console.log(y);
